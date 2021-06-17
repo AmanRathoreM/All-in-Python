@@ -463,3 +463,103 @@ plt.show()
 ### The above code will produce the following output
 
 ## ![Stack Plots](tutorial_6_2.svg "This graph is a Stack Plots")
+
+---
+
+---
+
+---
+
+---
+
+---
+
+## Tutorial 7_1
+
+### You will learn about Ploting graphs from a file in this Tutorial
+
+```python
+# Date 17-06-2021
+
+import matplotlib.pyplot as plt
+
+
+def seperate_x_y(file):
+
+    file = str(file).replace('\'', '').replace(
+        '\\n,', '|').replace(' ', '').replace('\n,', '|')
+
+    file = file[:len(file)-3]
+    file = file[1:len(file)].split('|')
+
+    i = 0
+    while (i < len(file)):
+        x.append(int(str(file[i]).split(',')[0]))
+        y.append(int(str(file[i]).split(',')[1]))
+        i += 1
+
+
+x = []
+y = []
+
+with open('tutorial_7_1.txt', 'r')as txt_file:
+    file = txt_file.readlines()
+
+seperate_x_y(file)
+
+
+plt.plot(x, y,
+         label='Line Graph Readed from \'.txt\' file')
+plt.scatter(x[0], y[0],
+            label='Starting Point')
+plt.xlabel('X Axis')
+plt.ylabel('Y Axis')
+plt.title('Reading Data from txt file')
+plt.legend()
+plt.show()
+```
+
+### The above code will produce the following output
+
+## ![Ploting from a file](tutorial_7_1.svg "This graph is Ploted from data which is taken from a file")
+
+---
+
+## Tutorial 7_2
+
+### You will learn about Ploting graphs from a file in this Tutorial
+
+```python
+# Date 17-06-2021
+
+import matplotlib.pyplot as plt
+import pandas as pd
+
+# * array([[17, 11, 13, 13, 15, 19,  0,  1,  2, 11],
+# *        [14,  7,  5,  8,  9, 15, 16, 13,  5,  9]])
+
+data = pd.read_excel('tutorial_7_2.xlsx', 'Sheet1')
+
+plt.plot(data['x axis'], data['y axis'], label='Line Graph Readed from Excel')
+plt.scatter(data['x axis'][0], data['y axis'][0],
+            label='Starting Point')
+plt.xlabel('X Axis')
+plt.ylabel('Y Axis')
+plt.title('Reading Data from Excel')
+plt.legend()
+plt.show()
+```
+
+### The above code will produce the following output
+
+## ![Ploting from a file](tutorial_7_2.svg "This graph is Ploted from data which is taken from a file")
+
+---
+
+---
+
+---
+
+---
+
+---
