@@ -52,7 +52,7 @@ plt.show()
 
 ### The above code will produce the following output
 
-## ![Image Name](tutorial_2_1.svg "This will appear if you will hover on image")
+## ![Image Name](https://github.com/AmanRathoreM/All-in-Python/blob/main/Tutorials/Python%20Modules/MatPlotLib/tutorial_2_1.svg "This will appear if you will hover on image")
 
 ---
 
@@ -82,7 +82,7 @@ plt.show()
 
 ### The above code will produce the following output
 
-## ![Image Name](tutorial_2_2.svg "This will appear if you will hover on image")
+## ![Image Name](https://github.com/AmanRathoreM/All-in-Python/blob/main/Tutorials/Python%20Modules/MatPlotLib/tutorial_2_2.svg "This will appear if you will hover on image")
 
 ---
 
@@ -120,7 +120,7 @@ plt.show()
 
 ### The above code will produce the following output
 
-## ![Image Name](tutorial_3_1.svg "This will appear if you will hover on image")
+## ![Image Name](https://github.com/AmanRathoreM/All-in-Python/blob/main/Tutorials/Python%20Modules/MatPlotLib/tutorial_3_1.svg "This will appear if you will hover on image")
 
 ---
 
@@ -151,7 +151,7 @@ plt.show()
 
 ### The above code will produce the following output
 
-## ![Image Name](tutorial_3_2.svg "This will appear if you will hover on image")
+## ![Image Name](https://github.com/AmanRathoreM/All-in-Python/blob/main/Tutorials/Python%20Modules/MatPlotLib/tutorial_3_2.svg "This will appear if you will hover on image")
 
 ---
 
@@ -189,7 +189,7 @@ plt.show()
 
 ### The above code will produce the following output
 
-## ![Image Name](tutorial_4_1.svg "This will appear if you will hover on image")
+## ![Image Name](https://github.com/AmanRathoreM/All-in-Python/blob/main/Tutorials/Python%20Modules/MatPlotLib/tutorial_4_1.svg "This will appear if you will hover on image")
 
 ---
 
@@ -268,7 +268,7 @@ plt.show()
 
 ### The above code will produce the following output
 
-## ![Image Name](tutorial_4_2.svg "This will appear if you will hover on image")
+## ![Image Name](https://github.com/AmanRathoreM/All-in-Python/blob/main/Tutorials/Python%20Modules/MatPlotLib/tutorial_4_2.svg "This will appear if you will hover on image")
 
 ---
 
