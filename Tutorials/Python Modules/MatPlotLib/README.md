@@ -904,3 +904,112 @@ plt.show()
 ### The above code will produce the following output
 
 ## ![background colour Customization](tutorial_12_6.svg "This graph is is an example of background colour Customization in MatPlotLib")
+
+---
+
+---
+
+---
+
+---
+
+---
+
+## Tutorial 13_1
+
+### In this Tutorial you will learn about Borders Customization in MatPlotLib
+
+```python
+# Date 17-06-2021
+
+import matplotlib.pyplot as plt
+
+x = [196, 743, 1382, 1798, 3460, 4204, 4500, 5578, 7166, 9135, 9521]
+y = [578, 1642, 2322, 3691, 4478, 5631, 5931, 6191, 8593, 8720, 9837]
+
+
+plt.plot(x, y, label='First Plot', color='b')
+plt.xlabel('X axis')
+plt.ylabel('Y axis')
+plt.title('Borders Customization')
+# plt.tight_layout()
+plt.gca().spines['left'].set_color('#D35CDB')
+plt.gca().spines['left'].set_linewidth(16)
+plt.gca().spines['top'].set_visible(False)
+plt.gca().spines['right'].set_color('#0AD11B')
+plt.gca().spines['bottom'].set_color('#C9BD0A')
+
+plt.fill_between(x, y, 6500, color="#BAAAE6", alpha=0.25)
+# plt.legend()
+plt.show()
+```
+
+### The above code will produce the following output
+
+## ![Borders Customization in MatPlotLib](tutorial_13_1.svg "This graph is is an example of Borders Customization in MatPlotLib")
+
+---
+
+## Tutorial 13_2
+
+### In this Tutorial you will learn about X Ticks color Customization in MatPlotLib
+
+```python
+# Date 17-06-2021
+
+import matplotlib.pyplot as plt
+
+x = [743, 5578, 9135,  196, 9521,  4500, 1382, 1798,  4204, 3460, 7166]
+y = [4478, 1642, 5931, 9837, 5631, 2322, 3691, 8593, 8720, 6191,  578]
+
+
+x.sort()
+y.sort()
+
+
+plt.plot(x, y, label='First Plot')
+plt.xlabel('X axis')
+plt.ylabel('Y axis')
+plt.title('X Ticks Customization in MatPlotLib')
+plt.legend()
+plt.xticks(x, rotation=90, color='r')
+plt.yticks(y, rotation=0, color='b')
+plt.show()
+```
+
+### The above code will produce the following output
+
+## ![X Ticks colour Customization](tutorial_13_2.svg "This graph is is an example of X Ticks colour Customization in MatPlotLib")
+
+---
+
+## Tutorial 13_3
+
+### In this Tutorial you will learn about line construction in MatPlotLib for
+
+```python
+# Date 17-06-2021
+
+import matplotlib.pyplot as plt
+
+x = [743, 5578, 9135,  196, 9521,  4500, 1382, 1798,  4204, 3460, 7166]
+y = [4478, 1642, 5931, 9837, 5631, 2322, 3691, 8593, 8720, 6191,  578]
+
+
+x.sort()
+y.sort()
+
+
+plt.plot(x, y, label='First Plot')
+plt.xlabel('X axis')
+plt.ylabel('Y axis')
+plt.title('Making line for better Anaylizing in MatPlotLib')
+plt.axhline(5000, color='r', linewidth=5, linestyle='--')
+plt.axvline(2500, color='m', linewidth=3.5, linestyle='-')
+plt.legend()
+plt.show()
+```
+
+### The above code will produce the following output
+
+## ![Line Construction in MatPlotLib](tutorial_13_3.svg "This graph is is an example of line construction in MatPlotLib")
