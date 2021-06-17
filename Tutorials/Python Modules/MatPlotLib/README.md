@@ -15,7 +15,7 @@ plt.show()
 
 ### The above code will produce the following output
 
-## ![Image Name](tutorial_1.svg "This will appear if you will hover on image")
+## ![Image Name](https://github.com/AmanRathoreM/All-in-Python/blob/main/Tutorials/Python%20Modules/MatPlotLib/tutorial_1.svg "This will appear if you will hover on image")
 
 ---
 
