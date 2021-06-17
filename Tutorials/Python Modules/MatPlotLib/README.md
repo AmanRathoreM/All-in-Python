@@ -2,6 +2,8 @@
 
 ## Tutorial 1
 
+### You will learn to plot line graph in this Tutorial
+
 ```python
 # Date 15-06-2021
 
@@ -15,7 +17,7 @@ plt.show()
 
 ### The above code will produce the following output
 
-## ![Image Name](https://github.com/AmanRathoreM/All-in-Python/blob/main/Tutorials/Python%20Modules/MatPlotLib/tutorial_1.svg "This will appear if you will hover on image")
+## ![Introduction and Line](tutorial_1.svg "This is a line graph")
 
 ---
 
@@ -28,6 +30,8 @@ plt.show()
 ---
 
 ## Tutorial 2_1
+
+### You will learn about Legends titles and labels in this Tutorial
 
 ```python
 # Date 16-06-2021
@@ -52,11 +56,13 @@ plt.show()
 
 ### The above code will produce the following output
 
-## ![Image Name](https://github.com/AmanRathoreM/All-in-Python/blob/main/Tutorials/Python%20Modules/MatPlotLib/tutorial_2_1.svg "This will appear if you will hover on image")
+## ![Legends titles and labels](tutorial_2_1.svg "This graph is a line graph")
 
 ---
 
 ## Tutorial 2_2
+
+### You will learn about Legends titles and labels in this Tutorial
 
 ```python
 # Date 16-06-2021
@@ -82,7 +88,7 @@ plt.show()
 
 ### The above code will produce the following output
 
-## ![Image Name](https://github.com/AmanRathoreM/All-in-Python/blob/main/Tutorials/Python%20Modules/MatPlotLib/tutorial_2_2.svg "This will appear if you will hover on image")
+## ![Legends titles and labels](tutorial_2_2.svg "This graph is a line graph")
 
 ---
 
@@ -95,6 +101,8 @@ plt.show()
 ---
 
 ## Tutorial 3_1
+
+### You will learn about bar graphs in this Tutorial
 
 ```python
 # Date 16-06-2021
@@ -120,11 +128,13 @@ plt.show()
 
 ### The above code will produce the following output
 
-## ![Image Name](https://github.com/AmanRathoreM/All-in-Python/blob/main/Tutorials/Python%20Modules/MatPlotLib/tutorial_3_1.svg "This will appear if you will hover on image")
+## ![Bar graphs](tutorial_3_1.svg "This graph is a Bar graph")
 
 ---
 
 ## Tutorial 3_2
+
+### You will learn about bar graphs in this Tutorial
 
 ```python
 # Date 16-06-2021
@@ -151,7 +161,7 @@ plt.show()
 
 ### The above code will produce the following output
 
-## ![Image Name](https://github.com/AmanRathoreM/All-in-Python/blob/main/Tutorials/Python%20Modules/MatPlotLib/tutorial_3_2.svg "This will appear if you will hover on image")
+## ![Bar graphs](tutorial_3_2.svg "This graph is a Bar graph")
 
 ---
 
@@ -164,6 +174,8 @@ plt.show()
 ---
 
 ## Tutorial 4_1
+
+### You will learn about Scatter Plots in this Tutorial
 
 ```python
 # Date 16-06-2021
@@ -189,11 +201,13 @@ plt.show()
 
 ### The above code will produce the following output
 
-## ![Image Name](https://github.com/AmanRathoreM/All-in-Python/blob/main/Tutorials/Python%20Modules/MatPlotLib/tutorial_4_1.svg "This will appear if you will hover on image")
+## ![Bar graphs](tutorial_4_1.svg "This graph is a Bar graph")
 
 ---
 
 ## Tutorial 4_2
+
+### You will learn about Scatter Plots in this Tutorial
 
 ```python
 # Date 16-06-2021
@@ -268,7 +282,7 @@ plt.show()
 
 ### The above code will produce the following output
 
-## ![Image Name](https://github.com/AmanRathoreM/All-in-Python/blob/main/Tutorials/Python%20Modules/MatPlotLib/tutorial_4_2.svg "This will appear if you will hover on image")
+## ![Bar graphs](tutorial_4_2.svg "This graph is a Bar graph")
 
 ---
 
@@ -281,6 +295,8 @@ plt.show()
 ---
 
 ## Tutorial 5_1
+
+### You will learn about Stack Plots in this Tutorial
 
 ```python
 # Date 16-06-2021
@@ -307,11 +323,106 @@ plt.show()
 
 ### The above code will produce the following output
 
-## ![Image Name](https://github.com/AmanRathoreM/All-in-Python/blob/main/Tutorials/Python%20Modules/MatPlotLib/tutorial_5_1.svg "This will appear if you will hover on image")
+## ![Stack Plots](tutorial_5_1.svg "This graph is a Stack Plots graph")
 
 ---
 
 ## Tutorial 5_2
+
+### You will learn about Stack Plots in this Tutorial
+
+```python
+# Date 16-06-2021
+
+import matplotlib.pyplot as plt
+
+days = [1, 2, 3, 4, 5, 6, 7]
+
+playing = [7,  9, 14, 9, 13,  4,  7]
+eating = [5, 1, 1, 3, 5, 4, 3]
+working = [14,  7,  6, 14, 11,  7,  7]
+programming = [1, 1, 4, 1, 3, 4, 2]
+sleeping = [5,  11,  8,  6, 10, 11,  9]
+
+width = 7
+
+plt.plot([], [], color='#A8FC00', label='programming', linewidth=width)
+plt.plot([], [], color='#00C5FC', label='playing', linewidth=width)
+plt.plot([], [], color='#EF4AA5', label='eating', linewidth=width)
+plt.plot([], [], color='#6BB7EA', label='working', linewidth=width)
+plt.plot([], [], color='#48DBAF', label='sleeping', linewidth=width)
+
+plt.stackplot(days, programming, playing, eating, working,
+              sleeping, colors=['#A8FC00', '#00C5FC', '#EF4AA5', '#6BB7EA', '#48DBAF'])
+
+plt.xlabel('X Label')
+plt.ylabel('Y Label')
+plt.title('Stack Plots')
+plt.legend()
+plt.show()
+```
+
+### The above code will produce the following output
+
+## ![Stack Plots](tutorial_5_2.svg "This graph is a Stack Plots graph")
+
+---
+
+---
+
+---
+
+---
+
+---
+
+## Tutorial 6_1
+
+### You will learn about Pie Chart in this Tutorial
+
+```python
+# Date 16-06-2021
+
+'''
+let's make a pie chart of the following data
+study           04
+sleep           11
+programming     05
+eating          03
+exercise        01
+total           24
+'''
+
+import matplotlib.pyplot as plt
+
+import matplotlib.pyplot as plt
+
+data = [4, 11, 5, 3, 1]
+data_is_of_what = ['Study', 'Sleep', 'Programming', 'Eating', 'Exercise']
+
+colours = ['#A8FC00', '#00C5FC', '#EF4AA5', '#6BB7EA', '#48DBAF']
+
+plt.pie(data,
+        labels=data_is_of_what,
+        colors=colours,
+        startangle=90,
+        shadow=True)
+
+
+plt.title('Pie Chart')
+# plt.legend()
+plt.show()
+```
+
+### The above code will produce the following output
+
+## ![Pie Chart](tutorial_6_1.svg "This graph is a Pie Chart")
+
+---
+
+## Tutorial 6_2
+
+### You will learn about Pie Chart in this Tutorial
 
 ```python
 # Date 16-06-2021
@@ -351,93 +462,4 @@ plt.show()
 
 ### The above code will produce the following output
 
-## ![Image Name](https://github.com/AmanRathoreM/All-in-Python/blob/main/Tutorials/Python%20Modules/MatPlotLib/tutorial_5_2.svg "This will appear if you will hover on image")
-
----
-
----
-
----
-
----
-
----
-
-## Tutorial 6_1
-
-```python
-# Date 16-06-2021
-
-'''
-let's make a pie chart of the following data
-study           04
-sleep           11
-programming     05
-eating          03
-exercise        01
-total           24
-'''
-
-import matplotlib.pyplot as plt
-
-import matplotlib.pyplot as plt
-
-data = [4, 11, 5, 3, 1]
-data_is_of_what = ['Study', 'Sleep', 'Programming', 'Eating', 'Exercise']
-
-colours = ['#A8FC00', '#00C5FC', '#EF4AA5', '#6BB7EA', '#48DBAF']
-
-plt.pie(data,
-        labels=data_is_of_what,
-        colors=colours,
-        startangle=90,
-        shadow=True)
-
-
-plt.title('Pie Chart')
-# plt.legend()
-plt.show()
-```
-
-### The above code will produce the following output
-
-## ![Image Name](https://github.com/AmanRathoreM/All-in-Python/blob/main/Tutorials/Python%20Modules/MatPlotLib/tutorial_6_1.svg "This will appear if you will hover on image")
-
----
-
-## Tutorial 6_2
-
-```python
-# Date 16-06-2021
-
-import matplotlib.pyplot as plt
-
-days = [1, 2, 3, 4, 5, 6, 7]
-
-playing = [7,  9, 14, 9, 13,  4,  7]
-eating = [5, 1, 1, 3, 5, 4, 3]
-working = [14,  7,  6, 14, 11,  7,  7]
-programming = [1, 1, 4, 1, 3, 4, 2]
-sleeping = [5,  11,  8,  6, 10, 11,  9]
-
-width = 7
-
-plt.plot([], [], color='#A8FC00', label='programming', linewidth=width)
-plt.plot([], [], color='#00C5FC', label='playing', linewidth=width)
-plt.plot([], [], color='#EF4AA5', label='eating', linewidth=width)
-plt.plot([], [], color='#6BB7EA', label='working', linewidth=width)
-plt.plot([], [], color='#48DBAF', label='sleeping', linewidth=width)
-
-plt.stackplot(days, programming, playing, eating, working,
-              sleeping, colors=['#A8FC00', '#00C5FC', '#EF4AA5', '#6BB7EA', '#48DBAF'])
-
-plt.xlabel('X Label')
-plt.ylabel('Y Label')
-plt.title('Stack Plots')
-plt.legend()
-plt.show()
-```
-
-### The above code will produce the following output
-
-## ![Image Name](https://github.com/AmanRathoreM/All-in-Python/blob/main/Tutorials/Python%20Modules/MatPlotLib/tutorial_6_2.svg "This will appear if you will hover on image")
+## ![Stack Plots](tutorial_6_2.svg "This graph is a Stack Plots")
