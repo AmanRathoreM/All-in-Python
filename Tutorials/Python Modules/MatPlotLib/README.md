@@ -311,7 +311,7 @@ plt.show()
 
 ---
 
-## Tutorial 6_2
+## Tutorial 5_2
 
 ```python
 # Date 16-06-2021
