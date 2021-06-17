@@ -563,3 +563,133 @@ plt.show()
 ---
 
 ---
+
+## Tutorial 8
+
+### In this Tutorial you will learn about taking data from InterNet for Ploting graphs in MatPlotLib
+
+```python
+# Date 17-06-2021
+
+# * Not done
+# * Not done
+# * Not done
+# * Not done
+# * Not done
+# * Not done
+# * Not done
+# * Not done
+# * Not done
+# * Not done
+```
+
+---
+
+---
+
+---
+
+---
+
+---
+
+## Tutorial 9
+
+### In this Tutorial you will learn about how to plot data which is taken from InterNet
+
+```python
+# Date 17-06-2021
+
+# * Not done
+# * Not done
+# * Not done
+# * Not done
+# * Not done
+# * Not done
+# * Not done
+# * Not done
+# * Not done
+# * Not done
+```
+
+---
+
+---
+
+---
+
+---
+
+---
+
+## Tutorial 10_1
+
+### In this Tutorial you will learn about Rotational Customization in MatPlotLib
+
+```python
+# Date 17-06-2021
+
+import matplotlib.pyplot as plt
+
+x = [743, 5578, 9135,  196, 9521,  4500, 1382, 1798,  4204, 3460, 7166]
+y = [4478, 1642, 5931, 9837, 5631, 2322, 3691, 8593, 8720, 6191,  578]
+
+
+x.sort()
+y.sort()
+
+
+plt.plot(x, y, label='First Plot')
+plt.xlabel('X axis')
+plt.ylabel('Y axis')
+plt.title('Rotational Customization in MatPlotLib')
+plt.legend()
+plt.xticks(x, rotation=65)
+plt.show()
+```
+
+### The above code will produce the following output
+
+## ![Rotational Customization in MatPlotLib](tutorial_10_1.svg "This graph is is an example of Rotational Customization in MatPlotLib")
+
+---
+
+## Tutorial 10_2
+
+### In this Tutorial you will learn about Grid Customization in MatPlotLib
+
+```python
+# Date 17-06-2021
+
+import matplotlib.pyplot as plt
+
+x = [743, 5578, 9135,  196, 9521,  4500, 1382, 1798,  4204, 3460, 7166]
+y = [4478, 1642, 5931, 9837, 5631, 2322, 3691, 8593, 8720, 6191,  578]
+
+
+x.sort()
+y.sort()
+
+
+plt.plot(x, y, label='First Plot')
+plt.xlabel('X axis')
+plt.ylabel('Y axis')
+plt.title('Grid Customization in MatPlotLib')
+plt.legend()
+plt.grid(color='#AC43CC', linestyle='--', linewidth=3)
+plt.show()
+```
+
+### The above code will produce the following output
+
+## ![Grid Customization in MatPlotLib](tutorial_10_2.svg "This graph is an example of Grid Customization in MatPlotLib")
+
+---
+
+---
+
+---
+
+---
+
+---
