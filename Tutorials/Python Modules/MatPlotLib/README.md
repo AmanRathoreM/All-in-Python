@@ -307,7 +307,7 @@ plt.show()
 
 ### The above code will produce the following output
 
-## ![Image Name](tutorial_5_1.svg "This will appear if you will hover on image")
+## ![Image Name](https://github.com/AmanRathoreM/All-in-Python/blob/main/Tutorials/Python%20Modules/MatPlotLib/tutorial_5_1.svg "This will appear if you will hover on image")
 
 ---
 
@@ -351,7 +351,7 @@ plt.show()
 
 ### The above code will produce the following output
 
-## ![Image Name](tutorial_5_2.svg "This will appear if you will hover on image")
+## ![Image Name](https://github.com/AmanRathoreM/All-in-Python/blob/main/Tutorials/Python%20Modules/MatPlotLib/tutorial_5_2.svg "This will appear if you will hover on image")
 
 ---
 
@@ -363,7 +363,7 @@ plt.show()
 
 ---
 
-## Tutorial 5_1
+## Tutorial 6_1
 
 ```python
 # Date 16-06-2021
@@ -401,11 +401,11 @@ plt.show()
 
 ### The above code will produce the following output
 
-## ![Image Name](tutorial_6_1.svg "This will appear if you will hover on image")
+## ![Image Name](https://github.com/AmanRathoreM/All-in-Python/blob/main/Tutorials/Python%20Modules/MatPlotLib/tutorial_6_1.svg "This will appear if you will hover on image")
 
 ---
 
-## Tutorial 5_2
+## Tutorial 6_2
 
 ```python
 # Date 16-06-2021
@@ -440,4 +440,4 @@ plt.show()
 
 ### The above code will produce the following output
 
-## ![Image Name](tutorial_6_2.svg "This will appear if you will hover on image")
+## ![Image Name](https://github.com/AmanRathoreM/All-in-Python/blob/main/Tutorials/Python%20Modules/MatPlotLib/tutorial_6_2.svg "This will appear if you will hover on image")
