@@ -1,0 +1,27 @@
+Acknowledgments . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . xix
+Introduction . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . xxi
+Chapter 1: Making Paper Cryptography Tools . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1
+Chapter 2: Programming in the Interactive Shell . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 11
+Chapter 3: Strings and Writing Programs . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 21
+Chapter 4: The Reverse Cipher . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 39
+Chapter 5: The Caesar Cipher . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 53
+Chapter 6: Hacking the Caesar Cipher with Brute-Force . . . . . . . . . . . . . . . . . . . . . . . . . . 69
+Chapter 7: Encrypting with the Transposition Cipher . . . . . . . . . . . . . . . . . . . . . . . . . . . . 77
+Chapter 8: Decrypting with the Transposition Cipher . . . . . . . . . . . . . . . . . . . . . . . . . . . . 99
+Chapter 9: Programming a Program to Test Your Program . . . . . . . . . . . . . . . . . . . . . . . 113
+Chapter 10: Encrypting and Decrypting Files . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 127
+Chapter 11: Detecting English Programmatically . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 141
+Chapter 12: Hacking the Transposition Cipher . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 161
+Chapter 13: A Modular Arithmetic Module for the Affine Cipher . . . . . . . . . . . . . . . . . . . 171
+Chapter 14: Programming the Affine Cipher . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 185
+Chapter 15: Hacking the Affine Cipher . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 197
+Chapter 16: Programming the Simple Substitution Cipher . . . . . . . . . . . . . . . . . . . . . . . . 207
+Chapter 17: Hacking the Simple Substitution Cipher . . . . . . . . . . . . . . . . . . . . . . . . . . . 221
+Chapter 18: Programming the Vigenère Cipher . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 247
+Chapter 19: Frequency Analysis . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 259
+Chapter 20: Hacking the Vigenère Cipher . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 279
+Chapter 21: The One-Time Pad Cipher . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 315
+Chapter 22: Finding and Generating Prime Numbers . . . . . . . . . . . . . . . . . . . . . . . . . . . 321
+Chapter 23: Generating Keys for the Public Key Cipher . . . . . . . . . . . . . . . . . . . . . . . . . 335
+Chapter 24: Programming the Public Key Cipher . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 349
+Appendix: Debugging Python Code . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 375
