@@ -37,6 +37,6 @@ plt.subplot(4, 1, 4)
 plt.plot(x(3000), y(3000), color='r', alpha=.6)
 plt.title('Subplot 6')
 
-plt.tight_layout(pad=-.5)
+plt.tight_layout(pad=.6)
 
 plt.show()
