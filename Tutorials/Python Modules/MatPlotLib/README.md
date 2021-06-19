@@ -2036,7 +2036,7 @@ plt.subplot(4, 1, 4)
 plt.plot(x(3000), y(3000), color='r', alpha=.6)
 plt.title('Subplot 6')
 
-plt.tight_layout(pad=.6)
+plt.tight_layout(pad=-.5)
 
 plt.show()
 ```
@@ -2044,5 +2044,246 @@ plt.show()
 ### The above code will produce the following output
 
 ## ![Subplots in MatPlotLib](tutorial_19_8.svg "This graph is is an example of Subplots in MatPlotLib")
+
+---
+
+---
+
+---
+
+---
+
+---
+
+## Tutorial 20
+
+### This tutorial is not done by me because it is not useful for me
+
+```python
+# Date 19-06-2021
+
+# * Not done
+# * Not done
+# * Not done
+# * Not done
+# * Not done
+# * Not done
+# * Not done
+# * Not done
+# * Not done
+# * Not done
+```
+
+---
+
+---
+
+---
+
+---
+
+---
+
+## Tutorial 21
+
+### This tutorial is not done by me because it is not useful for me
+
+```python
+# Date 19-06-2021
+
+# * Not done
+# * Not done
+# * Not done
+# * Not done
+# * Not done
+# * Not done
+# * Not done
+# * Not done
+# * Not done
+# * Not done
+```
+
+---
+
+---
+
+---
+
+---
+
+---
+
+## Tutorial 22
+
+### This tutorial is not done by me because it is not useful for me
+
+```python
+# Date 19-06-2021
+
+# * Not done
+# * Not done
+# * Not done
+# * Not done
+# * Not done
+# * Not done
+# * Not done
+# * Not done
+# * Not done
+# * Not done
+```
+
+---
+
+---
+
+---
+
+---
+
+---
+
+## Tutorial 23
+
+### This tutorial is not done by me because it is not useful for me
+
+```python
+# Date 19-06-2021
+
+# * Not done
+# * Not done
+# * Not done
+# * Not done
+# * Not done
+# * Not done
+# * Not done
+# * Not done
+# * Not done
+# * Not done
+```
+
+---
+
+---
+
+---
+
+---
+
+---
+
+## Tutorial 24
+
+### This tutorial is not done by me because it is not useful for me
+
+```python
+# Date 19-06-2021
+
+# * Not done
+# * Not done
+# * Not done
+# * Not done
+# * Not done
+# * Not done
+# * Not done
+# * Not done
+# * Not done
+# * Not done
+```
+
+---
+
+---
+
+---
+
+---
+
+---
+
+## Tutorial 25_1
+
+### In this Tutorial you will learn about Custimizing Legends in MatPlotLib
+
+```python
+# Date 19-06-2021
+
+import matplotlib.pyplot as plt
+import numpy as np
+
+
+def x(max_value=9999, min_value=0, i=200):
+    arr = np.random.randint(min_value, max_value, size=i)
+    arr.sort()
+    return arr
+
+
+def y(max_value=9999, min_value=0,  i=200): return np.random.randint(
+    min_value, max_value, size=i)
+
+
+plt.plot(x(1000), y(500), color='g', alpha=.6, label='0-500')
+plt.plot(x(1000), y(1000, 500), color='m', alpha=.6, label='500-1000')
+plt.plot(x(1000), y(1500, 1000), color='y', alpha=.6, label='1000-1500')
+plt.plot(x(1000), y(2000, 1500), color='deepskyblue',
+         alpha=.6, label='1500-2000')
+plt.title('Custimizing Lengends')
+plt.xlabel('X Axis')
+plt.ylabel('Y Axis')
+
+plt.legend(title='Legend Title', bbox_to_anchor=(
+    .1, 1.24), loc='upper left', borderaxespad=5, ncol=4)
+
+
+# plt.legend(loc='upper center', ncol=4, title='Legend Title',
+#            labelspacing=2)
+
+plt.show()
+```
+
+### The above code will produce the following output
+
+## ![Custimizing Lengends in MatPlotLib](tutorial_25_1.svg "This graph is is an example of Custimizing Lengends in MatPlotLib")
+
+---
+
+## Tutorial 25_1
+
+### In this Tutorial you will learn about Creating Subplots in MatPlotLib
+
+```python
+# Date 19-06-2021
+
+import matplotlib.pyplot as plt
+import numpy as np
+
+
+def x(max_value=9999, min_value=0, i=200):
+    arr = np.random.randint(min_value, max_value, size=i)
+    arr.sort()
+    return arr
+
+
+def y(max_value=9999, min_value=0,  i=200): return np.random.randint(
+    min_value, max_value, size=i)
+
+
+plt.plot(x(1000), y(500), color='g', alpha=.6, label='0-500')
+plt.plot(x(1000), y(1000, 500), color='m', alpha=.6, label='500-1000')
+plt.plot(x(1000), y(1500, 1000), color='y', alpha=.6, label='1000-1500')
+plt.plot(x(1000), y(2000, 1500), color='deepskyblue',
+         alpha=.6, label='1500-2000')
+plt.title('Custimizing Lengends')
+plt.xlabel('X Axis')
+plt.ylabel('Y Axis')
+
+plt.legend(loc='upper center', ncol=4, title='Legend Title',
+           labelspacing=2)
+
+plt.show()
+```
+
+### The above code will produce the following output
+
+## ![Custimizing Lengends in MatPlotLib](tutorial_25_2.svg "This graph is is an example of Custimizing Lengends in MatPlotLib")
 
 ---
