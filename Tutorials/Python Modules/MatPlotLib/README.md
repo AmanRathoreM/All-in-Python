@@ -134,26 +134,28 @@ plt.show()
 
 ## Tutorial 3_2
 
-### You will learn about bar graphs in this Tutorial
+### You will learn about Histogram in this Tutorial
 
 ```python
 # Date 16-06-2021
 
 import matplotlib.pyplot as plt
 
-ages = [84,40,23,44,91,36,60,94,72,39,32,5,119,
-        61,127,76,61,92,41,18,12,55,117,90,47,70,
-        108,97,8,40,34,43,130,109,129,115,64,113,99,
-        61,10,7,38,53,124,80,46,60,48,61,102,31,
-        4,100,30,99,115,114,19,9]
+ages = [84,  40,  23,  44,  91,  36,  60,  94,  72,  39,  32,   5, 119,
+        61, 127,  76,  61,  92,  41,  18,  12,  55, 117,  90,  47,  70,
+        108,  97,   8,  40,  34,  43, 130, 109, 129, 115,  64, 113,  99,
+        61,  10,   7,  38,  53, 124,  80,  46,  60,  48,  61, 102,  31,
+        4, 100,  30,  99, 115, 114,  19, 9]
 
 
-x_axis = [0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 110, 120, 130]
+how_many_people_exists_of_that_age = [
+    0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 110, 120, 130]
 
-plt.hist(ages, x_axis, histtype='bar', rwidth=0.9, color='#BC0786')
+plt.hist(ages, how_many_people_exists_of_that_age,
+         histtype='bar', rwidth=0.9, color='#BC0786')
 
-plt.xlabel('X Label')
-plt.ylabel('Y Label')
+plt.xlabel('Ages')
+plt.ylabel('People Exists')
 plt.title('Histogram')
 # plt.legend()
 plt.show()
@@ -1609,3 +1611,438 @@ plt.show()
 ### The above code will produce the following output
 
 ## ![More Annotation in MatPlotLib](tutorial_17_3.svg "This graph is is an example of Advance Annotation in MatPlotLib")
+
+---
+
+---
+
+---
+
+---
+
+---
+
+## Tutorial 18
+
+### In this Tutorial you will learn about Some More Advance Annotations in MatPlotLib
+
+```python
+# Date 19-06-2021
+
+import matplotlib.pyplot as plt
+import numpy as np
+
+x1 = np.array([6326, 1061, 5255, 8910, 4032, 5036, 1182, 6432, 8997, 3161, 9249,
+               1871, 6866, 6700,  798, 5905,  690, 1571,  740,  720, 5629, 3075,
+               6868, 4888, 4418, 1278, 9617, 6777, 1809, 3898])
+y1 = np.array([2399, 7403, 3863, 9333,  154, 5663, 6085, 9296, 3294, 8701, 3536,
+               6394, 4080, 1099, 2709, 6328, 1252, 6028,  105, 5719, 9252, 3958,
+               4282, 5450, 2109, 9304, 4491, 7527, 7671, 5623])
+
+x2 = np.array([313, 2647, 7225, 2046, 4713, 6821, 8139, 3050, 2013, 3015, 6815,
+               4368, 3230, 7745, 7966, 4053, 4717, 4016, 1376,  653, 4085,  480,
+               7399, 5362,  653, 1794, 7507, 5403, 9313, 9741])
+y2 = np.array([7971, 4700, 5357, 7873, 2221, 3902, 2987, 3787, 5352, 4755,  952,
+               4267, 3203, 9733, 8905, 8131, 6948,  303, 3423, 9987, 1383, 2936,
+               4932, 2743, 3779,  322, 3930,  468, 6119, 1695])
+
+
+x1.sort()
+x2.sort()
+
+plt.style.use('fivethirtyeight')
+
+
+bbox_props = dict(boxstyle="larrow", fc='b',
+                  alpha=.4, ec="m", lw=2, pad=.1,)
+plt.text(10500, 6000, "Sample", ha="center", va="center", rotation=0,
+         size=12,
+         bbox=bbox_props)
+
+bbox_props = dict(boxstyle="darrow", fc='paleturquoise',
+                  alpha=.4, ec="teal", lw=2, pad=.1,)
+plt.text(10400, 4000, "See\nHere Also", ha="center", va="center", rotation=0,
+         size=12,
+         bbox=bbox_props)
+
+plt.plot(x1, y1, label='First Plot')
+plt.plot(x2, y2, label='Second Plot')
+plt.xlabel('X axis')
+plt.ylabel('Y axis')
+plt.title('Some More Advance Annotations in MatPlotLib')
+plt.legend()
+plt.show()
+```
+
+### The above code will produce the following output
+
+## ![Some More Advance Annotations in MatPlotLib](tutorial_18.svg "This graph is is an example of Annotation in MatPlotLib")
+
+---
+
+---
+
+---
+
+---
+
+---
+
+## Tutorial 19_1
+
+### In this Tutorial you will learn about Creating Subplots in MatPlotLib
+
+```python
+# Date 19-06-2021
+
+import matplotlib.pyplot as plt
+import numpy as np
+
+
+def x(max_value=9999, i=30):
+    arr = np.random.randint(max_value, size=i)
+    arr.sort()
+    return arr
+
+
+def y(max_value=9999, i=30): return np.random.randint(max_value, size=i)
+
+
+plt.subplot(3, 1, 1)
+plt.plot(x(500), y(500), color='r', alpha=.6)
+plt.title('Subplot 1')
+plt.subplot(3, 1, 2)
+plt.plot(x(5000), y(5000), color='g', alpha=.5)
+plt.title('Subplot 2')
+plt.subplot(3, 1, 3)
+plt.plot(x(50000), y(50000), color='y')
+plt.title('Subplot 3')
+plt.show()
+```
+
+### The above code will produce the following output
+
+## ![Subplots in MatPlotLib](tutorial_19_1.svg "This graph is is an example of Subplots in MatPlotLib")
+
+---
+
+## Tutorial 19_2
+
+### In this Tutorial you will learn about Creating Subplots in MatPlotLib
+
+```python
+# Date 19-06-2021
+
+import matplotlib.pyplot as plt
+import numpy as np
+
+
+def x(max_value=9999, i=30):
+    arr = np.random.randint(max_value, size=i)
+    arr.sort()
+    return arr
+
+
+def y(max_value=9999, i=30): return np.random.randint(max_value, size=i)
+
+
+plt.subplot(1, 3, 1)
+plt.plot(x(500), y(500), color='r', alpha=.6)
+plt.title('Subplot 1')
+plt.subplot(1, 3, 2)
+plt.plot(x(5000), y(5000), color='g', alpha=.5)
+plt.title('Subplot 2')
+plt.subplot(1, 3, 3)
+plt.plot(x(50000), y(50000), color='y')
+plt.title('Subplot 3')
+plt.show()
+```
+
+### The above code will produce the following output
+
+## ![Subplots in MatPlotLib](tutorial_19_2.svg "This graph is is an example of Subplots in MatPlotLib")
+
+---
+
+## Tutorial 19_3
+
+### In this Tutorial you will learn about Creating Subplots in MatPlotLib
+
+```python
+# Date 19-06-2021
+
+import matplotlib.pyplot as plt
+import numpy as np
+
+
+def x(max_value=9999, i=30):
+    arr = np.random.randint(max_value, size=i)
+    arr.sort()
+    return arr
+
+
+def y(max_value=9999, i=30): return np.random.randint(max_value, size=i)
+
+
+plt.subplot(2, 3, 1)
+plt.plot(x(1000), y(1000), color='r', alpha=.6)
+plt.title('Subplot 1')
+plt.subplot(2, 3, 2)
+plt.plot(x(2000), y(2000), color='g', alpha=.5)
+plt.title('Subplot 2')
+plt.subplot(2, 3, 3)
+plt.plot(x(3000), y(3000), color='y')
+plt.title('Subplot 3')
+plt.subplot(2, 3, 4)
+plt.plot(x(4000), y(4000), color='y')
+plt.title('Subplot 4')
+plt.subplot(2, 3, 5)
+plt.plot(x(5000), y(5000), color='y')
+plt.title('Subplot 5')
+plt.subplot(2, 3, 6)
+plt.plot(x(6000), y(6000), color='y')
+plt.title('Subplot 6')
+plt.show()
+```
+
+### The above code will produce the following output
+
+## ![Subplots in MatPlotLib](tutorial_19_3.svg "This graph is is an example of Subplots in MatPlotLib")
+
+---
+
+## Tutorial 19_4
+
+### In this Tutorial you will learn about Creating Subplots in MatPlotLib
+
+```python
+# Date 19-06-2021
+
+import matplotlib.pyplot as plt
+import numpy as np
+
+
+def x(max_value=9999, i=30):
+    arr = np.random.randint(max_value, size=i)
+    arr.sort()
+    return arr
+
+
+def y(max_value=9999, i=30): return np.random.randint(max_value, size=i)
+
+
+plt.subplot(2, 2, 1)
+plt.plot(x(1000), y(1000), color='r', alpha=.6)
+plt.title('Subplot 1')
+plt.subplot(2, 2, 2)
+plt.plot(x(2000), y(2000), color='y', alpha=.6)
+plt.title('Subplot 2')
+plt.subplot(2, 1, 2)
+plt.plot(x(3000), y(3000), color='g', alpha=.6)
+plt.title('Subplot 3')
+
+plt.show()
+```
+
+### The above code will produce the following output
+
+## ![Subplots in MatPlotLib](tutorial_19_4.svg "This graph is is an example of Subplots in MatPlotLib")
+
+---
+
+## Tutorial 19_5
+
+### In this Tutorial you will learn about Creating Subplots in MatPlotLib
+
+```python
+# Date 19-06-2021
+
+import matplotlib.pyplot as plt
+import numpy as np
+
+
+def x(max_value=9999, i=30):
+    arr = np.random.randint(max_value, size=i)
+    arr.sort()
+    return arr
+
+
+def y(max_value=9999, i=30): return np.random.randint(max_value, size=i)
+
+
+plt.subplot(2, 2, 1)
+plt.plot(x(1000), y(1000), color='r', alpha=.6)
+plt.title('Subplot 1')
+plt.subplot(2, 2, 3)
+plt.plot(x(2000), y(2000), color='y', alpha=.6)
+plt.title('Subplot 2')
+plt.subplot(1, 2, 2)
+plt.plot(x(3000), y(3000), color='g', alpha=.6)
+plt.title('Subplot 3')
+
+plt.show()
+```
+
+### The above code will produce the following output
+
+## ![Subplots in MatPlotLib](tutorial_19_5.svg "This graph is is an example of Subplots in MatPlotLib")
+
+---
+
+## Tutorial 19_6
+
+### In this Tutorial you will learn about Creating Subplots in MatPlotLib
+
+```python
+# Date 19-06-2021
+
+import matplotlib.pyplot as plt
+import numpy as np
+
+
+def x(max_value=9999, i=30):
+    arr = np.random.randint(max_value, size=i)
+    arr.sort()
+    return arr
+
+
+def y(max_value=9999, i=30): return np.random.randint(max_value, size=i)
+
+
+plt.subplot(3, 2, 1)
+plt.plot(x(1000), y(1000), color='g', alpha=.6)
+plt.title('Subplot 1')
+
+plt.subplot(3, 2, 2)
+plt.plot(x(2000), y(2000), color='y')
+plt.title('Subplot 2')
+
+plt.subplot(3, 1, 2)
+plt.plot(x(3000), y(3000), color='r', alpha=.6)
+plt.title('Subplot 3')
+
+plt.subplot(3, 2, 5)
+plt.plot(x(4000), y(4000), color='m', alpha=.6)
+plt.title('Subplot 4')
+
+plt.subplot(3, 2, 6)
+plt.plot(x(5000), y(5000), color='teal')
+plt.title('Subplot 5')
+
+
+plt.show()
+```
+
+### The above code will produce the following output
+
+## ![Subplots in MatPlotLib](tutorial_19_6.svg "This graph is is an example of Subplots in MatPlotLib")
+
+---
+
+## Tutorial 19_7
+
+### In this Tutorial you will learn about Creating Subplots in MatPlotLib
+
+```python
+# Date 19-06-2021
+
+import matplotlib.pyplot as plt
+import numpy as np
+
+
+def x(max_value=9999, i=30):
+    arr = np.random.randint(max_value, size=i)
+    arr.sort()
+    return arr
+
+
+def y(max_value=9999, i=30): return np.random.randint(max_value, size=i)
+
+
+plt.subplot(4, 2, 1)
+plt.plot(x(1000), y(1000), color='g', alpha=.6)
+plt.title('Subplot 1')
+
+plt.subplot(4, 2, 2)
+plt.plot(x(2000), y(2000), color='y')
+plt.title('Subplot 2')
+
+plt.subplot(4, 2, 3)
+plt.plot(x(4000), y(4000), color='m', alpha=.6)
+plt.title('Subplot 3')
+
+plt.subplot(3, 2, 4)
+plt.plot(x(5000), y(5000), color='teal')
+plt.title('Subplot 4')
+
+plt.subplot(4, 2, 5)
+plt.plot(x(5000), y(5000), color='deepskyblue')
+plt.title('Subplot 5')
+
+plt.subplot(4, 1, 4)
+plt.plot(x(3000), y(3000), color='r', alpha=.6)
+plt.title('Subplot 6')
+
+plt.show()
+```
+
+### The above code will produce the following output
+
+## ![Subplots in MatPlotLib](tutorial_19_7.svg "This graph is is an example of Subplots in MatPlotLib")
+
+---
+
+## Tutorial 19_8
+
+### In this Tutorial you will learn about Creating Subplots in MatPlotLib
+
+```python
+# Date 19-06-2021
+
+import matplotlib.pyplot as plt
+import numpy as np
+
+
+def x(max_value=9999, i=30):
+    arr = np.random.randint(max_value, size=i)
+    arr.sort()
+    return arr
+
+
+def y(max_value=9999, i=30): return np.random.randint(max_value, size=i)
+
+
+plt.subplot(4, 2, 1)
+plt.plot(x(1000), y(1000), color='g', alpha=.6)
+plt.title('Subplot 1')
+
+plt.subplot(4, 2, 2)
+plt.plot(x(2000), y(2000), color='y')
+plt.title('Subplot 2')
+
+plt.subplot(4, 2, 3)
+plt.plot(x(4000), y(4000), color='m', alpha=.6)
+plt.title('Subplot 3')
+
+plt.subplot(4, 2, (4, 6))
+plt.plot(x(5000), y(5000), color='teal')
+plt.title('Subplot 4')
+
+plt.subplot(4, 2, 5)
+plt.plot(x(5000), y(5000), color='deepskyblue')
+plt.title('Subplot 5')
+
+plt.subplot(4, 1, 4)
+plt.plot(x(3000), y(3000), color='r', alpha=.6)
+plt.title('Subplot 6')
+
+plt.tight_layout(pad=-.5)
+
+plt.show()
+```
+
+### The above code will produce the following output
+
+## ![Subplots in MatPlotLib](tutorial_19_8.svg "This graph is is an example of Subplots in MatPlotLib")
+
+---
