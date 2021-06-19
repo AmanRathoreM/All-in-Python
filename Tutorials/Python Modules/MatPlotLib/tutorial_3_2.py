@@ -9,12 +9,14 @@ ages = [84,  40,  23,  44,  91,  36,  60,  94,  72,  39,  32,   5, 119,
         4, 100,  30,  99, 115, 114,  19, 9]
 
 
-x_axis = [0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 110, 120, 130]
+how_many_people_exists_of_that_age = [
+    0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 110, 120, 130]
 
-plt.hist(ages, x_axis, histtype='bar', rwidth=0.9, color='#BC0786')
+plt.hist(ages, how_many_people_exists_of_that_age,
+         histtype='bar', rwidth=0.9, color='#BC0786')
 
-plt.xlabel('X Label')
-plt.ylabel('Y Label')
+plt.xlabel('Ages')
+plt.ylabel('People Exists')
 plt.title('Histogram')
 # plt.legend()
 plt.show()
