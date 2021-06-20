@@ -14,7 +14,7 @@
 
 ## tutorial_3_1
 
-### [Creating Data Frame](tutorial_3_1.ipynb "Clike here to see full tutorial file")
+### [Creating Data Frame](tutorial_PART_3_1.ipynb "Clike here to see full tutorial file")
 
 ```python
 file = pd.read_csv('file_name.csv')
@@ -44,7 +44,7 @@ Output of the above code is
 
 ## tutorial_3_2
 
-### [Creating Data Frame](tutorial_3_2.ipynb "Clike here to see full tutorial file")
+### [Creating Data Frame](tutorial_PART_3_2.ipynb "Clike here to see full tutorial file")
 
 ```python
 pd.options.display.max_rows
