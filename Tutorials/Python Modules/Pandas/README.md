@@ -44,7 +44,7 @@ Output of the above code is
 
 ## tutorial_3_2
 
-### [Creating Data Frame](tutorial_PART_3_2.ipynb "Clike here to see full tutorial file")
+### [Some Options and Methods in Pandas](tutorial_PART_3_2.ipynb "Clike here to see full tutorial file")
 
 ```python
 pd.options.display.max_rows
