@@ -2287,3 +2287,267 @@ plt.show()
 ## ![Custimizing Lengends in MatPlotLib](tutorial_25_2.svg "This graph is is an example of Custimizing Lengends in MatPlotLib")
 
 ---
+
+---
+
+---
+
+---
+
+---
+
+## Tutorial 26
+
+### In this Tutorial you will learn about BaseMaps
+
+```python
+# Date 19-06-2021
+
+# * Not done because BaseMap is having problem in installing
+# * Not done because BaseMap is having problem in installing
+# * Not done because BaseMap is having problem in installing
+# * Not done because BaseMap is having problem in installing
+# * Not done because BaseMap is having problem in installing
+# * Not done because BaseMap is having problem in installing
+# * Not done because BaseMap is having problem in installing
+# * Not done because BaseMap is having problem in installing
+# * Not done because BaseMap is having problem in installing
+# * Not done because BaseMap is having problem in installing
+```
+
+---
+
+---
+
+---
+
+---
+
+---
+
+## Tutorial 27
+
+### In this Tutorial you will learn about BaseMaps
+
+```python
+# Date 19-06-2021
+
+# * Not done because BaseMap is having problem in installing
+# * Not done because BaseMap is having problem in installing
+# * Not done because BaseMap is having problem in installing
+# * Not done because BaseMap is having problem in installing
+# * Not done because BaseMap is having problem in installing
+# * Not done because BaseMap is having problem in installing
+# * Not done because BaseMap is having problem in installing
+# * Not done because BaseMap is having problem in installing
+# * Not done because BaseMap is having problem in installing
+# * Not done because BaseMap is having problem in installing
+```
+
+---
+
+---
+
+---
+
+---
+
+---
+
+## Tutorial 28
+
+### In this Tutorial you will learn about BaseMaps
+
+```python
+# Date 19-06-2021
+
+# * Not done because BaseMap is having problem in installing
+# * Not done because BaseMap is having problem in installing
+# * Not done because BaseMap is having problem in installing
+# * Not done because BaseMap is having problem in installing
+# * Not done because BaseMap is having problem in installing
+# * Not done because BaseMap is having problem in installing
+# * Not done because BaseMap is having problem in installing
+# * Not done because BaseMap is having problem in installing
+# * Not done because BaseMap is having problem in installing
+# * Not done because BaseMap is having problem in installing
+```
+
+---
+
+---
+
+---
+
+---
+
+---
+
+## Tutorial 29_1
+
+### In this Tutorial you will learn about 3D Plotting in MatPlotLib
+
+```python
+# Date 19-06-2021
+
+
+import matplotlib.pyplot as plt
+import numpy as np
+
+
+ax1 = plt.axes(projection='3d')
+
+
+def x(max_value=9999, i=30):
+    arr = np.random.randint(max_value, size=i)
+    arr.sort()
+    return arr
+
+
+def y_and_z(max_value=9999, i=30): return np.random.randint(max_value, size=i)
+
+
+ax1.plot3D(x(), y_and_z(), y_and_z(), color='r', label='3d Plot')
+
+plt.xlabel('X Axis')
+plt.ylabel('Y Axis')
+plt.legend()
+
+plt.show()
+```
+
+### The above code will produce the following output
+
+## ![3D Plotting in MatPlotLib](tutorial_29_1.svg "This graph is is an example of 3D Plotting in MatPlotLib")
+
+---
+
+## Tutorial 29_2
+
+### In this Tutorial you will learn about 3D Plotting in MatPlotLib
+
+```python
+# Date 19-06-2021
+
+
+import matplotlib.pyplot as plt
+import numpy as np
+
+
+ax1 = plt.axes(projection='3d')
+
+
+x = np.linspace(100, 1100, 100)
+y = np.cos(x)
+z = np.sin(x)
+
+ax1.plot3D(x, y, z, color='r', label='3d Plot')
+
+plt.xlabel('X Axis')
+plt.ylabel('Y Axis')
+plt.legend()
+
+plt.show()
+```
+
+### The above code will produce the following outputs
+
+## ![3D Plotting in MatPlotLib](tutorial_29_2_1.svg "This graph is is an example of 3D Plotting in MatPlotLib")
+
+## ![3D Plotting in MatPlotLib](tutorial_29_2_2.svg "This graph is is an example of 3D Plotting in MatPlotLib")
+
+---
+
+---
+
+---
+
+---
+
+---
+
+## Tutorial 30
+
+### In this Tutorial you will learn about 3D Scatter Plotting in MatPlotLib
+
+```python
+# Date 20-06-2021
+
+
+import matplotlib.pyplot as plt
+import numpy as np
+
+
+ax1 = plt.axes(projection='3d')
+
+
+def x(max_value=9999, i=30):
+    arr = np.random.randint(max_value, size=i)
+    arr.sort()
+    return arr
+
+
+def y_and_z(max_value=9999, i=30): return np.random.randint(
+    max_value, size=i)
+
+
+ax1.scatter3D(x(), y_and_z(), y_and_z(), color='teal',
+              label='3d Scatter Plot 1', marker='$@$', s=302)
+
+ax1.scatter3D(x(), y_and_z(), y_and_z(), color='deepskyblue',
+              label='3d Scatter Plot 2', marker='*', s=302)
+
+plt.xlabel('X Axis')
+plt.ylabel('Y Axis')
+plt.legend(title='3D ScatterPlots', labelspacing=2)
+
+plt.show()
+```
+
+### The above code will produce the following output
+
+## ![3D Scatter Plotting in MatPlotLib](tutorial_30.svg "This graph is is an example of 3D Scatter Plotting in MatPlotLib")
+
+---
+
+---
+
+---
+
+---
+
+---
+
+## Tutorial 31
+
+### In this Tutorial you will learn about 3D Bar Graph Plotting in MatPlotLib
+
+```python
+# Date 20-06-2021
+
+
+import matplotlib.pyplot as plt
+import numpy as np
+
+
+ax1 = plt.axes(projection='3d')
+
+
+x = np.linspace(100, 1100, 100)
+y = np.cos(x)
+z = np.sin(x)
+
+ax1.plot3D(x, y, z, color='r', label='3d Plot')
+
+plt.xlabel('X Axis')
+plt.ylabel('Y Axis')
+plt.legend()
+
+plt.show()
+```
+
+### The above code will produce the following outputs
+
+## ![3D Bar Graph Plotting in MatPlotLib](tutorial_31_1.svg "This graph is is an example of 3D Bar Graph Plotting in MatPlotLib")
+
+## ![3D Bar Graph Plotting in MatPlotLib](tutorial_31_2.svg "This graph is is an example of 3D Bar Graph Plotting in MatPlotLib")
