@@ -1,5 +1,5 @@
 # MatPlotLib
-
+These tutorials are watched from [**_sentdex_**](https://www.youtube.com/user/sentdex "Clike here to checkout his channel") YouTube channel from [**_MatPlotLib Playlist_**](https://youtube.com/playlist?list=PLQVvvaa0QuDfefDfXb9Yf0la1fPDKluPF "Clike here to check out his Python 3 tutorials Playlist")
 ## Tutorial 1
 
 ### You will learn to plot line graph in this Tutorial
