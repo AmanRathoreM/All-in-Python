@@ -406,3 +406,72 @@ dtype: float64
 ---
 
 ---
+
+## tutorial_3_7_Exercise_01
+
+### [First Exercise in Pandas](tutorial_PART_3_7_Exercise_01.ipynb "Clike here to see file")
+
+---
+
+---
+
+---
+
+## tutorial_3_9
+
+### [Selecting Columns in Pandas](tutorial_PART_3_9.ipynb "Clike here to see full tutorial file")
+
+<br>
+
+```python
+titanic_data_csv['age']
+```
+
+Output of the above code is
+
+```
+0      22.0
+1      38.0
+2      26.0
+3      35.0
+4      35.0
+       ...
+886    27.0
+887    19.0
+888     NaN
+889    26.0
+890    32.0
+Name: age, Length: 891, dtype: float64
+```
+
+---
+
+---
+
+<br>
+
+```python
+titanic_data_csv[['fare','sex','embarked']]
+```
+
+Output of the above code is
+
+|     |  fare   |  sex   | embarked |
+| :-: | :-----: | :----: | :------: |
+|  0  | 7.2500  |  male  |    S     |
+|  1  | 71.2833 | female |    C     |
+|  2  | 7.9250  | female |    S     |
+|  3  | 53.1000 | female |    S     |
+|  4  | 8.0500  |  male  |    S     |
+| ... |   ...   |  ...   |   ...    |
+| 886 | 13.0000 |  male  |    S     |
+| 887 | 30.0000 | female |    S     |
+| 888 | 23.4500 | female |    S     |
+| 889 | 30.0000 |  male  |    C     |
+| 890 | 7.7500  |  male  |    Q     |
+
+---
+
+---
+
+---
