@@ -638,3 +638,163 @@ Output of the above code is
 ---
 
 ---
+
+## tutorial_3_13
+
+### [Slicing Rows and Columns with iloc in Pandas](tutorial_PART_3_13.ipynb "Clike here to see full tutorial file")
+
+<br>
+
+```python
+summer_olmypic_data_csv.iloc[0:10,7]
+```
+
+Output of the above code is
+
+```
+Athlete
+HAJOS, Alfred              Gold
+HERSCHMANN, Otto         Silver
+DRIVAS, Dimitrios        Bronze
+MALOKINIS, Ioannis         Gold
+CHASAPIS, Spiridon       Silver
+CHOROPHAS, Efstathios    Bronze
+HAJOS, Alfred              Gold
+ANDREOU, Joannis         Silver
+CHOROPHAS, Efstathios    Bronze
+NEUMANN, Paul              Gold
+Name: Medal, dtype: object
+```
+
+---
+
+---
+
+<br>
+
+```python
+summer_olmypic_data_csv.iloc[0:10,[2,-3,-1]]
+```
+
+Output of the above code is
+| Athlete | Sport | Gender | Medal |
+|:---------------------:|:--------:|:------:|:------:|
+| HAJOS, Alfred | Aquatics | Men | Gold |
+| HERSCHMANN, Otto | Aquatics | Men | Silver |
+| DRIVAS, Dimitrios | Aquatics | Men | Bronze |
+| MALOKINIS, Ioannis | Aquatics | Men | Gold |
+| CHASAPIS, Spiridon | Aquatics | Men | Silver |
+| CHOROPHAS, Efstathios | Aquatics | Men | Bronze |
+| HAJOS, Alfred | Aquatics | Men | Gold |
+| ANDREOU, Joannis | Aquatics | Men | Silver |
+| CHOROPHAS, Efstathios | Aquatics | Men | Bronze |
+| NEUMANN, Paul | Aquatics | Men | Gold |
+
+---
+
+---
+
+---
+
+## tutorial_3_15
+
+### [Label based Indexing in Pandas](tutorial_PART_3_15.ipynb "Clike here to see full tutorial file")
+
+<br>
+
+```python
+summer_olmypic_data_csv.loc['CHASAPIS, Spiridon']
+```
+
+Output of the above code is
+
+```
+Year                                1896
+City                              Athens
+Sport                           Aquatics
+Discipline                      Swimming
+Country                              GRE
+Gender                               Men
+Event         100M Freestyle For Sailors
+Medal                             Silver
+Name: CHASAPIS, Spiridon, dtype: object
+```
+
+---
+
+---
+
+<br>
+
+```python
+summer_olmypic_data_csv.loc["LATYNINA, Larisa"]
+```
+
+Output of the above code is
+| Athlete | Year | City | Sport | Discipline | Country | Gender | Event | Medal |
+|:----------------:|:----:|:---------------------:|:----------:|:-----------:|:-------:|:------:|:------------------------:|:------:|
+| LATYNINA, Larisa | 1956 | Melbourne / Stockholm | Gymnastics | Artistic G. | URS | Women | Floor Exercises | Gold |
+| LATYNINA, Larisa | 1956 | Melbourne / Stockholm | Gymnastics | Artistic G. | URS | Women | Individual All-Round | Gold |
+| LATYNINA, Larisa | 1956 | Melbourne / Stockholm | Gymnastics | Artistic G. | URS | Women | Team Competition | Gold |
+| LATYNINA, Larisa | 1956 | Melbourne / Stockholm | Gymnastics | Artistic G. | URS | Women | Team, Portable Apparatus | Bronze |
+| LATYNINA, Larisa | 1956 | Melbourne / Stockholm | Gymnastics | Artistic G. | URS | Women | Uneven Bars | Silver |
+| LATYNINA, Larisa | 1956 | Melbourne / Stockholm | Gymnastics | Artistic G. | URS | Women | Vault | Gold |
+| LATYNINA, Larisa | 1960 | Rome | Gymnastics | Artistic G. | URS | Women | Balance Beam | Silver |
+| LATYNINA, Larisa | 1960 | Rome | Gymnastics | Artistic G. | URS | Women | Floor Exercises | Gold |
+| LATYNINA, Larisa | 1960 | Rome | Gymnastics | Artistic G. | URS | Women | Individual All-Round | Gold |
+| LATYNINA, Larisa | 1960 | Rome | Gymnastics | Artistic G. | URS | Women | Team Competition | Gold |
+| LATYNINA, Larisa | 1960 | Rome | Gymnastics | Artistic G. | URS | Women | Uneven Bars | Silver |
+| LATYNINA, Larisa | 1960 | Rome | Gymnastics | Artistic G. | URS | Women | Vault | Bronze |
+| LATYNINA, Larisa | 1964 | Tokyo | Gymnastics | Artistic G. | URS | Women | Balance Beam | Bronze |
+| LATYNINA, Larisa | 1964 | Tokyo | Gymnastics | Artistic G. | URS | Women | Floor Exercises | Gold |
+| LATYNINA, Larisa | 1964 | Tokyo | Gymnastics | Artistic G. | URS | Women | Individual All-Round | Silver |
+| LATYNINA, Larisa | 1964 | Tokyo | Gymnastics | Artistic G. | URS | Women | Team Competition | Gold |
+| LATYNINA, Larisa | 1964 | Tokyo | Gymnastics | Artistic G. | URS | Women | Uneven Bars | Bronze |
+| LATYNINA, Larisa | 1964 | Tokyo | Gymnastics | Artistic G. | URS | Women | Vault | Silver |
+
+---
+
+---
+
+---
+
+## tutorial_3_16
+
+### [Indexing using iloc in Pandas](tutorial_PART_3_16.ipynb "Clike here to see full tutorial file")
+
+<br>
+
+```python
+summer_olmypic_data_csv.loc['DRIVAS, Dimitrios':'CHASAPIS, Spiridon']
+```
+
+Output of the above code is
+
+|      Athlete       | Year |  City  |  Sport   | Discipline | Country | Gender |           Event            | Medal  |
+| :----------------: | :--: | :----: | :------: | :--------: | :-----: | :----: | :------------------------: | :----: |
+| DRIVAS, Dimitrios  | 1896 | Athens | Aquatics |  Swimming  |   GRE   |  Men   | 100M Freestyle For Sailors | Bronze |
+| MALOKINIS, Ioannis | 1896 | Athens | Aquatics |  Swimming  |   GRE   |  Men   | 100M Freestyle For Sailors |  Gold  |
+| CHASAPIS, Spiridon | 1896 | Athens | Aquatics |  Swimming  |   GRE   |  Men   | 100M Freestyle For Sailors | Silver |
+
+---
+
+---
+
+<br>
+
+```python
+summer_olmypic_data_csv.loc['DRIVAS, Dimitrios':'CHASAPIS, Spiridon',['Medal','Event','Year']]
+```
+
+Output of the above code is
+| Athlete | Medal | Event | Year |
+|:------------------:|:------:|:--------------------------:|:----:|
+| DRIVAS, Dimitrios | Bronze | 100M Freestyle For Sailors | 1896 |
+| MALOKINIS, Ioannis | Gold | 100M Freestyle For Sailors | 1896 |
+| CHASAPIS, Spiridon | Silver | 100M Freestyle For Sailors | 1896 |
+
+---
+
+---
+
+---
