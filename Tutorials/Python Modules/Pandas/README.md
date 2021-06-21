@@ -475,3 +475,166 @@ Output of the above code is
 ---
 
 ---
+
+## tutorial_3_10
+
+### [Selecting Columns in Pandas](tutorial_PART_3_10.ipynb "Clike here to see full tutorial file")
+
+<br>
+
+```python
+titanic_data_csv.fare.equals(titanic_data_csv['fare'])
+```
+
+Output of the above code is
+
+```
+True
+```
+
+---
+
+---
+
+<br>
+
+```python
+titanic_data_csv.sex
+```
+
+Output of the above code is
+
+```
+0        male
+1      female
+2      female
+3      female
+4        male
+        ...
+886      male
+887    female
+888    female
+889      male
+890      male
+Name: sex, Length: 891, dtype: object
+```
+
+---
+
+---
+
+---
+
+## tutorial_3_12
+
+### [Indexing using iloc in Pandas](tutorial_PART_3_12.ipynb "Clike here to see full tutorial file")
+
+<br>
+
+```python
+summer_olmypic_data_csv.iloc[1]
+```
+
+Output of the above code is
+
+```
+Year                    1896
+City                  Athens
+Sport               Aquatics
+Discipline          Swimming
+Country                  AUT
+Gender                   Men
+Event         100M Freestyle
+Medal                 Silver
+Name: HERSCHMANN, Otto, dtype: object
+```
+
+---
+
+---
+
+<br>
+
+```python
+summer_olmypic_data_csv.iloc[[3,5,9,13]]
+```
+
+Output of the above code is
+| Athlete | Year | City | Sport | Discipline | Country | Gender | Event | Medal |
+|:---------------------:|:----:|:------:|:---------:|:----------:|:-------:|:------:|:--------------------------:|:------:|
+| MALOKINIS, Ioannis | 1896 | Athens | Aquatics | Swimming | GRE | Men | 100M Freestyle For Sailors | Gold |
+| CHOROPHAS, Efstathios | 1896 | Athens | Aquatics | Swimming | GRE | Men | 1200M Freestyle | Bronze |
+| NEUMANN, Paul | 1896 | Athens | Aquatics | Swimming | AUT | Men | 400M Freestyle | Gold |
+| BURKE, Thomas | 1896 | Athens | Athletics | Athletics | USA | Men | 100M | Gold |
+
+---
+
+---
+
+<br>
+
+```python
+summer_olmypic_data_csv.iloc[3:13]
+```
+
+Output of the above code is
+| Athlete | Year | City | Sport | Discipline | Country | Gender | Event | Medal |
+|:---------------------:|:----:|:------:|:---------:|:----------:|:-------:|:------:|:--------------------------:|:------:|
+| MALOKINIS, Ioannis | 1896 | Athens | Aquatics | Swimming | GRE | Men | 100M Freestyle For Sailors | Gold |
+| CHASAPIS, Spiridon | 1896 | Athens | Aquatics | Swimming | GRE | Men | 100M Freestyle For Sailors | Silver |
+| CHOROPHAS, Efstathios | 1896 | Athens | Aquatics | Swimming | GRE | Men | 1200M Freestyle | Bronze |
+| HAJOS, Alfred | 1896 | Athens | Aquatics | Swimming | HUN | Men | 1200M Freestyle | Gold |
+| ANDREOU, Joannis | 1896 | Athens | Aquatics | Swimming | GRE | Men | 1200M Freestyle | Silver |
+| CHOROPHAS, Efstathios | 1896 | Athens | Aquatics | Swimming | GRE | Men | 400M Freestyle | Bronze |
+| NEUMANN, Paul | 1896 | Athens | Aquatics | Swimming | AUT | Men | 400M Freestyle | Gold |
+| PEPANOS, Antonios | 1896 | Athens | Aquatics | Swimming | GRE | Men | 400M Freestyle | Silver |
+| LANE, Francis | 1896 | Athens | Athletics | Athletics | USA | Men | 100M | Bronze |
+| SZOKOLYI, Alajos | 1896 | Athens | Athletics | Athletics | HUN | Men | 100M | Bronze |
+
+---
+
+---
+
+<br>
+
+```python
+summer_olmypic_data_csv.iloc[-1]
+```
+
+Output of the above code is
+
+```
+Year                         2012
+City                       London
+Sport                   Wrestling
+Discipline    Wrestling Freestyle
+Country                       SWE
+Gender                        Men
+Event                    Wg 96 KG
+Medal                      Bronze
+Name: LIDBERG, Jimmy, dtype: object
+```
+
+---
+
+---
+
+<br>
+
+```python
+summer_olmypic_data_csv.iloc[-9:-5]
+```
+
+Output of the above code is
+| Athlete | Year | City | Sport | Discipline | Country | Gender | Event | Medal |
+|:----------------------------:|:----:|:------:|:---------:|:-------------------:|:-------:|:------:|:--------:|:------:|
+| KAZAKEVIC, Aleksandr | 2012 | London | Wrestling | Wrestling Freestyle | LTU | Men | Wg 74 KG | Bronze |
+| KHUGAEV, Alan | 2012 | London | Wrestling | Wrestling Freestyle | RUS | Men | Wg 84 KG | Gold |
+| EBRAHIM, Karam Mohamed Gaber | 2012 | London | Wrestling | Wrestling Freestyle | EGY | Men | Wg 84 KG | Silver |
+| GAJIYEV, Danyal | 2012 | London | Wrestling | Wrestling Freestyle | KAZ | Men | Wg 84 KG | Bronze |
+
+---
+
+---
+
+---
