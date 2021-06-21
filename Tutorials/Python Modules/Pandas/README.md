@@ -698,7 +698,7 @@ Output of the above code is
 
 ## tutorial_3_15
 
-### [Label based Indexing in Pandas](tutorial_PART_3_15.ipynb "Clike here to see full tutorial file")
+### [Label Based Indexing Part 1 in Pandas](tutorial_PART_3_15.ipynb "Clike here to see full tutorial file")
 
 <br>
 
@@ -760,7 +760,7 @@ Output of the above code is
 
 ## tutorial_3_16
 
-### [Indexing using iloc in Pandas](tutorial_PART_3_16.ipynb "Clike here to see full tutorial file")
+### [Label Based Indexing Part 2 in Pandas](tutorial_PART_3_16.ipynb "Clike here to see full tutorial file")
 
 <br>
 
@@ -769,12 +769,11 @@ summer_olmypic_data_csv.loc['DRIVAS, Dimitrios':'CHASAPIS, Spiridon']
 ```
 
 Output of the above code is
-
-|      Athlete       | Year |  City  |  Sport   | Discipline | Country | Gender |           Event            | Medal  |
+| Athlete | Year | City | Sport | Discipline | Country | Gender | Event | Medal |
 | :----------------: | :--: | :----: | :------: | :--------: | :-----: | :----: | :------------------------: | :----: |
-| DRIVAS, Dimitrios  | 1896 | Athens | Aquatics |  Swimming  |   GRE   |  Men   | 100M Freestyle For Sailors | Bronze |
-| MALOKINIS, Ioannis | 1896 | Athens | Aquatics |  Swimming  |   GRE   |  Men   | 100M Freestyle For Sailors |  Gold  |
-| CHASAPIS, Spiridon | 1896 | Athens | Aquatics |  Swimming  |   GRE   |  Men   | 100M Freestyle For Sailors | Silver |
+| DRIVAS, Dimitrios | 1896 | Athens | Aquatics | Swimming | GRE | Men | 100M Freestyle For Sailors | Bronze |
+| MALOKINIS, Ioannis | 1896 | Athens | Aquatics | Swimming | GRE | Men | 100M Freestyle For Sailors | Gold |
+| CHASAPIS, Spiridon | 1896 | Athens | Aquatics | Swimming | GRE | Men | 100M Freestyle For Sailors | Silver |
 
 ---
 
@@ -792,6 +791,50 @@ Output of the above code is
 | DRIVAS, Dimitrios | Bronze | 100M Freestyle For Sailors | 1896 |
 | MALOKINIS, Ioannis | Gold | 100M Freestyle For Sailors | 1896 |
 | CHASAPIS, Spiridon | Silver | 100M Freestyle For Sailors | 1896 |
+
+---
+
+---
+
+---
+
+## tutorial_3_18
+
+### [Indexing and Slicing with reindex in Pandas](tutorial_PART_3_18.ipynb "Clike here to see full tutorial file")
+
+<br>
+
+```python
+summer_olmypic_data_csv.reindex(index=[4,90,7000,30000],columns=['Athlete','Event','Medal'])
+```
+
+Output of the above code is
+| | Athlete | Event | Medal |
+|------:|-------------------------:|---------------------------:|-------:|
+| 4 | CHASAPIS, Spiridon | 100M Freestyle For Sailors | Silver |
+| 90 | NEUKIRCH, Karl | Team, Horizontal Bar | Gold |
+| 7000 | WARNHOLTZ, Rudolf (Tito) | Hockey | Silver |
+| 30000 | PAUTARAN, Maryna | K-4 500M | Bronze |
+
+---
+
+---
+
+<br>
+
+```python
+summer_olmypic_data_csv.reindex(index=[4,90,7000,30000,999999,1000000],columns=['Athlete','Event','Medal','Age'])
+```
+
+Output of the above code is
+| | Athlete | Event | Medal | Age |
+|:-------:|:------------------------:|:--------------------------:|:------:|:---:|
+| 4 | CHASAPIS, Spiridon | 100M Freestyle For Sailors | Silver | NaN |
+| 90 | NEUKIRCH, Karl | Team, Horizontal Bar | Gold | NaN |
+| 7000 | WARNHOLTZ, Rudolf (Tito) | Hockey | Silver | NaN |
+| 30000 | PAUTARAN, Maryna | K-4 500M | Bronze | NaN |
+| 999999 | NaN | NaN | NaN | NaN |
+| 1000000 | NaN | NaN | NaN | NaN |
 
 ---
 
