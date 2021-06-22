@@ -841,3 +841,346 @@ Output of the above code is
 ---
 
 ---
+
+## tutorial_3_21_Exercise_02
+
+### [Second Exercise in Pandas](tutorial_PART_3_21_Exercise_02.ipynb "Clike here to see file")
+
+---
+
+---
+
+---
+
+## tutorial_4_2
+
+### [Series in Pandas](tutorial_PART_4_2.ipynb "Clike here to see full tutorial file")
+
+<br>
+
+```python
+age.to_frame()
+```
+
+Output of the above code is
+| | age |
+|:---:|:----:|
+| 0 | 22.0 |
+| 1 | 38.0 |
+| 2 | 26.0 |
+| 3 | 35.0 |
+| 4 | 35.0 |
+| ... | ... |
+| 886 | 27.0 |
+| 887 | 19.0 |
+| 888 | NaN |
+| 889 | 26.0 |
+| 890 | 32.0 |
+
+---
+
+---
+
+<br>
+
+```python
+age.to_frame().info()
+```
+
+Output of the above code is
+
+```
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 891 entries, 0 to 890
+Data columns (total 1 columns):
+ #   Column  Non-Null Count  Dtype
+---  ------  --------------  -----
+ 0   age     714 non-null    float64
+dtypes: float64(1)
+memory usage: 7.1 KB
+```
+
+---
+
+---
+
+---
+
+## tutorial_4_3
+
+### [Analyzing Numerical Series with unique, nunique and value_counts functions in Pandas](tutorial_PART_4_3.ipynb "Clike here to see full tutorial file")
+
+<br>
+
+```python
+age.unique()
+```
+
+Output of the above code is
+
+```
+array([22.  , 38.  , 26.  , 35.  ,   nan, 54.  ,  2.  , 27.  , 14.  ,
+        4.  , 58.  , 20.  , 39.  , 55.  , 31.  , 34.  , 15.  , 28.  ,
+        8.  , 19.  , 40.  , 66.  , 42.  , 21.  , 18.  ,  3.  ,  7.  ,
+       49.  , 29.  , 65.  , 28.5 ,  5.  , 11.  , 45.  , 17.  , 32.  ,
+       16.  , 25.  ,  0.83, 30.  , 33.  , 23.  , 24.  , 46.  , 59.  ,
+       71.  , 37.  , 47.  , 14.5 , 70.5 , 32.5 , 12.  ,  9.  , 36.5 ,
+       51.  , 55.5 , 40.5 , 44.  ,  1.  , 61.  , 56.  , 50.  , 36.  ,
+       45.5 , 20.5 , 62.  , 41.  , 52.  , 63.  , 23.5 ,  0.92, 43.  ,
+       60.  , 10.  , 64.  , 13.  , 48.  ,  0.75, 53.  , 57.  , 80.  ,
+       70.  , 24.5 ,  6.  ,  0.67, 30.5 ,  0.42, 34.5 , 74.  ])
+```
+
+---
+
+---
+
+<br>
+
+```python
+age.nunique(dropna=False)
+```
+
+Output of the above code is
+
+```
+89
+```
+
+---
+
+---
+
+<br>
+
+```python
+age.value_counts()
+```
+
+Output of the above code is
+
+```
+24.00    30
+22.00    27
+18.00    26
+19.00    25
+30.00    25
+         ..
+55.50     1
+70.50     1
+66.00     1
+23.50     1
+0.42      1
+Name: age, Length: 88, dtype: int64
+```
+
+---
+
+---
+
+<br>
+
+```python
+age.value_counts(ascending=True)
+```
+
+Output of the above code is
+
+```
+0.42      1
+23.50     1
+66.00     1
+70.50     1
+55.50     1
+         ..
+30.00    25
+19.00    25
+18.00    26
+22.00    27
+24.00    30
+Name: age, Length: 88, dtype: int64
+```
+
+---
+
+---
+
+<br>
+
+```python
+age.value_counts(normalize=True)
+```
+
+Output of the above code is
+
+```
+24.00    0.042017
+22.00    0.037815
+18.00    0.036415
+19.00    0.035014
+30.00    0.035014
+           ...
+55.50    0.001401
+70.50    0.001401
+66.00    0.001401
+23.50    0.001401
+0.42     0.001401
+Name: age, Length: 88, dtype: float64
+```
+
+---
+
+---
+
+<br>
+
+```python
+age.value_counts(normalize=True,dropna=False).sum()
+```
+
+Output of the above code is
+
+```
+0.9999999999999999
+```
+
+---
+
+---
+
+<br>
+
+```python
+age.value_counts(normalize=True,dropna=False)
+```
+
+Output of the above code is
+
+```
+NaN      0.198653
+24.00    0.033670
+22.00    0.030303
+18.00    0.029181
+28.00    0.028058
+           ...
+36.50    0.001122
+55.50    0.001122
+66.00    0.001122
+23.50    0.001122
+0.42     0.001122
+Name: age, Length: 89, dtype: float64
+```
+
+---
+
+---
+
+<br>
+
+```python
+age.value_counts(normalize=True,dropna=False)*100
+```
+
+Output of the above code is
+
+```
+NaN      19.865320
+24.00     3.367003
+22.00     3.030303
+18.00     2.918070
+28.00     2.805836
+           ...
+36.50     0.112233
+55.50     0.112233
+66.00     0.112233
+23.50     0.112233
+0.42      0.112233
+Name: age, Length: 89, dtype: float64
+```
+
+---
+
+---
+
+<br>
+
+```python
+arr1=age.value_counts(normalize=True,dropna=False)*100
+arr1.sum()
+```
+
+Output of the above code is
+
+```
+100
+```
+
+---
+
+---
+
+<br>
+
+```python
+age.value_counts(dropna=True,bins=5)
+```
+
+Output of the above code is
+
+```
+(16.336, 32.252]    346
+(32.252, 48.168]    188
+(0.339, 16.336]     100
+(48.168, 64.084]     69
+(64.084, 80.0]       11
+Name: age, dtype: int64
+```
+
+---
+
+---
+
+<br>
+
+```python
+age.value_counts(normalize=True,bins=5)
+```
+
+Output of the above code is
+
+```
+(16.336, 32.252]    0.388328
+(32.252, 48.168]    0.210999
+(0.339, 16.336]     0.112233
+(48.168, 64.084]    0.077441
+(64.084, 80.0]      0.012346
+Name: age, dtype: float64
+```
+
+---
+
+---
+
+<br>
+
+```python
+age.value_counts(normalize=True,bins=5)*100
+arr1.sum()
+```
+
+Output of the above code is
+
+```
+(16.336, 32.252]    38.832772
+(32.252, 48.168]    21.099888
+(0.339, 16.336]     11.223345
+(48.168, 64.084]     7.744108
+(64.084, 80.0]       1.234568
+Name: age, dtype: float64
+```
+
+---
+
+---
+
+---
