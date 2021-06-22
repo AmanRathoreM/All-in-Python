@@ -1165,7 +1165,6 @@ Name: age, dtype: float64
 
 ```python
 age.value_counts(normalize=True,bins=5)*100
-arr1.sum()
 ```
 
 Output of the above code is
