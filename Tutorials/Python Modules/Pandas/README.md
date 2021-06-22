@@ -328,14 +328,13 @@ titanic_data_csv.mean()
 Output of the above code is
 
 ```
-survived         0
-pclass           1
-sex         female
-age           0.42
-sibsp            0
-parch            0
-fare             0
-dtype: object
+survived     0.383838
+pclass       2.308642
+age         29.699118
+sibsp        0.523008
+parch        0.381594
+fare        32.204208
+dtype: float64
 ```
 
 ---
@@ -345,19 +344,20 @@ dtype: object
 <br>
 
 ```python
-titanic_data_csv.index
+titanic_data_csv.min()
 ```
 
 Output of the above code is
 
 ```
-survived     0.383838
-pclass       2.308642
-age         29.699118
-sibsp        0.523008
-parch        0.381594
-fare        32.204208
-dtype: float64
+survived         0
+pclass           1
+sex         female
+age           0.42
+sibsp            0
+parch            0
+fare             0
+dtype: object
 ```
 
 ---
