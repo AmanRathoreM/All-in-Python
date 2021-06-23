@@ -908,7 +908,7 @@ memory usage: 7.1 KB
 
 ## tutorial_4_3
 
-### [Analyzing Numerical Series with unique, nunique and value_counts functions in Pandas](tutorial_PART_4_3.ipynb "Clike here to see full tutorial file")
+### [Analyzing Numerical Series with unique, nunique and value_counts functions in Pandas Part 1](tutorial_PART_4_3.ipynb "Clike here to see full tutorial file")
 
 <br>
 
@@ -1177,6 +1177,400 @@ Output of the above code is
 (64.084, 80.0]       1.234568
 Name: age, dtype: float64
 ```
+
+---
+
+---
+
+---
+
+## tutorial_4_4
+
+### [Analyzing Numerical Series with unique, nunique and value_counts functions in Pandas Part 2](tutorial_PART_4_4.ipynb "Clike here to see full tutorial file")
+
+<br>
+
+There is nothing much in this tutorial
+
+---
+
+---
+
+---
+
+## tutorial_4_5
+
+### [Creating Pandas Series Part 1](tutorial_PART_4_5.ipynb "Clike here to see full tutorial file")
+
+<br>
+
+```python
+pd.Series([45,7,6,4,7,9,78],index=['SUN','MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT'],name='Sales')
+```
+
+Output of the above code is
+
+```
+SUN    45
+MON     7
+TUE     6
+WED     4
+THU     7
+FRI     9
+SAT    78
+Name: Sales, dtype: int64
+```
+
+---
+
+---
+
+---
+
+## tutorial_4_6
+
+### [Creating Pandas Series Part 2](tutorial_PART_4_6.ipynb "Clike here to see full tutorial file")
+
+<br>
+
+```python
+sales=list(sales)
+sales
+```
+
+Output of the above code is
+
+```
+[448, 348, 869, 481, 712, 225, 475, 415, 217, 947]
+```
+
+---
+
+---
+
+<br>
+
+```python
+sales={'SUN':sales[0],'Mon':sales[1],'TUE':sales[2],'WED':sales[3],'THU':sales[4],'FRI':sales[5],'SAT':sales[6]}
+sales
+```
+
+Output of the above code is
+
+```
+{'SUN': 448,
+ 'Mon': 348,
+ 'TUE': 869,
+ 'WED': 481,
+ 'THU': 712,
+ 'FRI': 225,
+ 'SAT': 475}
+```
+
+---
+
+---
+
+<br>
+
+```python
+pd.Series(sales)
+```
+
+Output of the above code is
+
+```
+SUN    448
+Mon    348
+TUE    869
+WED    481
+THU    712
+FRI    225
+SAT    475
+dtype: int64
+```
+
+---
+
+---
+
+---
+
+## tutorial_4_7
+
+### [Indexing and Slicing Pandas Series](tutorial_PART_4_7.ipynb "Clike here to see full tutorial file")
+
+<br>
+
+```python
+age.iloc[:-860]
+```
+
+Output of the above code is
+
+```
+0     22.0
+1     38.0
+2     26.0
+3     35.0
+4     35.0
+5      NaN
+6     54.0
+7      2.0
+8     27.0
+9     14.0
+10     4.0
+11    58.0
+12    20.0
+13    39.0
+14    14.0
+15    55.0
+16     2.0
+17     NaN
+18    31.0
+19     NaN
+20    35.0
+21    34.0
+22    15.0
+23    28.0
+24     8.0
+25    38.0
+26     NaN
+27    19.0
+28     NaN
+29     NaN
+30    40.0
+Name: age, dtype: float64
+```
+
+---
+
+---
+
+---
+
+## tutorial_4_8
+
+### [Sorting of Pandas Series and inplace Parameter](tutorial_PART_4_8.ipynb "Clike here to see full tutorial file")
+
+<br>
+
+```python
+age.sort_values(ascending= False,na_position= 'first',inplace=True)
+age
+```
+
+Output of the above code is
+
+```
+5       NaN
+17      NaN
+19      NaN
+26      NaN
+28      NaN
+       ...
+78     0.83
+469    0.75
+644    0.75
+755    0.67
+803    0.42
+Name: age, Length: 891, dtype: float64
+```
+
+---
+
+---
+
+---
+
+## tutorial_4_9
+
+### [nlargest and nsmallest methods in Pandas](tutorial_PART_4_9.ipynb "Clike here to see full tutorial file")
+
+<br>
+
+```python
+age.nlargest(n=9)
+```
+
+Output of the above code is
+
+```
+630    80.0
+851    74.0
+96     71.0
+493    71.0
+116    70.5
+672    70.0
+745    70.0
+33     66.0
+54     65.0
+Name: age, dtype: float64
+```
+
+---
+
+---
+
+<br>
+
+```python
+age.nsmallest(n=30)
+```
+
+Output of the above code is
+
+```
+803    0.42
+755    0.67
+469    0.75
+644    0.75
+78     0.83
+831    0.83
+305    0.92
+164    1.00
+172    1.00
+183    1.00
+381    1.00
+386    1.00
+788    1.00
+827    1.00
+7      2.00
+16     2.00
+119    2.00
+205    2.00
+297    2.00
+340    2.00
+479    2.00
+530    2.00
+642    2.00
+824    2.00
+43     3.00
+193    3.00
+261    3.00
+348    3.00
+374    3.00
+407    3.00
+Name: age, dtype: float64
+```
+
+---
+
+---
+
+---
+
+## tutorial_4_10
+
+### [idxmin and idsmax in Pandas](tutorial_PART_4_10.ipynb "Clike here to see full tutorial file")
+
+<br>
+
+```python
+age.idxmin()
+```
+
+Output of the above code is
+
+```
+803
+```
+
+---
+
+---
+
+<br>
+
+```python
+age.idxmax()
+```
+
+Output of the above code is
+
+```
+630
+```
+
+---
+
+---
+
+---
+
+## tutorial_4_11
+
+### [Manipulating Pandas Series](tutorial_PART_4_11.ipynb "Clike here to see full tutorial file")
+
+<br>
+
+```python
+age[:]=12
+age
+```
+
+Output of the above code is
+
+```
+<ipython-input-13-7d9ef9a484ad>:1: SettingWithCopyWarning:
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  age[:]=12
+C:\ProgramData\Anaconda3\lib\site-packages\pandas\core\indexing.py:670: SettingWithCopyWarning:
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  iloc._setitem_with_indexer(indexer, value)
+0      12.0
+1      12.0
+2      12.0
+3      12.0
+4      12.0
+       ...
+886    12.0
+887    12.0
+888    12.0
+889    12.0
+890    12.0
+Name: age, Length: 891, dtype: float64
+```
+
+---
+
+---
+
+<br>
+
+```python
+titanic_data_csv
+```
+
+Output of the above code is
+
+|     | survived | pclass |  sex   | age  | sibsp | parch |  fare   | embarked | deck |
+| :-: | :------: | :----: | :----: | :--: | :---: | :---: | :-----: | :------: | :--: |
+|  0  |    0     |   3    |  male  | 12.0 |   1   |   0   | 7.2500  |    S     | NaN  |
+|  1  |    1     |   1    | female | 12.0 |   1   |   0   | 71.2833 |    C     |  C   |
+|  2  |    1     |   3    | female | 12.0 |   0   |   0   | 7.9250  |    S     | NaN  |
+|  3  |    1     |   1    | female | 12.0 |   1   |   0   | 53.1000 |    S     |  C   |
+|  4  |    0     |   3    |  male  | 12.0 |   0   |   0   | 8.0500  |    S     | NaN  |
+| ... |   ...    |  ...   |  ...   | ...  |  ...  |  ...  |   ...   |   ...    | ...  |
+| 886 |    0     |   2    |  male  | 12.0 |   0   |   0   | 13.0000 |    S     | NaN  |
+| 887 |    1     |   1    | female | 12.0 |   0   |   0   | 30.0000 |    S     |  B   |
+| 888 |    0     |   3    | female | 12.0 |   1   |   2   | 23.4500 |    S     | NaN  |
+| 889 |    1     |   1    |  male  | 12.0 |   0   |   0   | 30.0000 |    C     |  C   |
+| 890 |    0     |   3    |  male  | 12.0 |   0   |   0   | 7.7500  |    Q     | NaN  |
+
+---
+
+---
+
+---
+
+## tutorial_4_13_Exercise_03
+
+### [Exercise 3](tutorial_PART_4_13_Exercise_03.ipynb "Clike here to see full tutorial file")
 
 ---
 
