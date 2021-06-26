@@ -1,4 +1,5 @@
-# Pandas
+<h1 style="text-align:center; font-size:360%; font-family:verdana;color:#4A3E76;"><em>Pandas</em></h1>
+
 
 ## These tutorials are watched from [**_Udemy_**](https://www.udemy.com/ "Clike here to checkout Udemy Website") website from [**_Pandas tutorial by Alexander Hagmann_**](https://www.udemy.com/share/101WOgAEcdc1lXQH4B/ "Clike here to check out his Course")
 
