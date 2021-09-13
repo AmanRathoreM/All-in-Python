@@ -2,7 +2,7 @@
 
 # Usage
 
-This project can be used to generate Beautyfull READMEs
+This project can be used to generate Beautyfull READMEs [LIKE THIS](Generated_README_Example.md)
 
 ---
 
