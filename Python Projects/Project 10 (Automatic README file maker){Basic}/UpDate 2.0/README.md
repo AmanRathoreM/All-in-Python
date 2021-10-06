@@ -18,6 +18,6 @@ This is version 2.0 of my previous README generator Project
 
 ---
 
-## Authors
+## Author
 
 - [@Aman](https://www.github.com/AmanRathoreM)
