@@ -1,0 +1,1 @@
+# These tutorials are watched from [**_sentdex_**](https://www.youtube.com/channel/UCfzlCWGWYyIQ0aLC5w48gBQ "Clike here to checkout his channel") YouTube channel from [**_PyGame Playlist_**](https://www.youtube.com/playlist?list=PLQVvvaa0QuDdLkP8MrOXLe_rKuf6r80KO "Clike here to check out his Pygame tutorials Playlist")
