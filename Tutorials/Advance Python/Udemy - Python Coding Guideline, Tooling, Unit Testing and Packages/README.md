@@ -55,3 +55,10 @@ There are different types of docstrings formats like [sphinx style](https://www.
 ```python
 def return_email(self, mail: str = "gmail") -> str:
 ```
+
+---
+
+<!-- Date 10-11-2021 -->
+
+## Packaging
+You can create a package documentation using [MkDocs](https://www.mkdocs.org/) by following [these instructions](https://www.mkdocs.org/getting-started/).
