@@ -62,3 +62,4 @@ def return_email(self, mail: str = "gmail") -> str:
 
 ## Packaging
 You can create a package documentation using [MkDocs](https://www.mkdocs.org/) by following [these instructions](https://www.mkdocs.org/getting-started/).
+[This site is generated with mkdir](https://aman0864.github.io/test-repo/)
