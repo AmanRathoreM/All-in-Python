@@ -1,0 +1,24 @@
+site_name: My_First_Python_Package
+site_description: "This is a documentation of a package created to understand that how the docs are created in Python"
+
+# nav:
+#     - Home: index.md
+#     - About: about.md
+
+nav:
+  - "Start": index.md
+  - "API": api.md
+
+theme:
+  name: "material"
+  palette:
+    primary: "cyan"
+    accent: "orange"
+
+plugins:
+  - search
+  - mkdocstrings
+
+markdown_extensions:
+  - pymdownx.highlight
+  - pymdownx.superfences
