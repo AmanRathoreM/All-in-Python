@@ -4,10 +4,9 @@ try:
     import time
     from datetime import datetime
     import pandas as pd
-    import termcolor
     from datetime import timedelta
 
-    main_csv = pd.read_csv("anylasis_of_time_consumed_in_programming.csv", usecols=[
+    main_csv = pd.read_csv("analysis_of_time_consumed_in_programming.csv", usecols=[
         "Proper Date", "Time"]).tail(2)
 
     # * Year,Month,Day,Date,Proper Date,Time,Unix Time,Epoch time(tm_year),Epoch time(tm_mon),Epoch time(tm_mday),Epoch time(tm_hour),Epoch time(tm_min),Epoch time(tm_sec),Epoch time(tm_wday),Epoch time(tm_yday),Epoch time(tm_isdst),Time Zone,Time Zone Name,Type (Starting or Ending)
@@ -21,7 +20,7 @@ try:
     Last_time_ended_programming_time = main_csv.iat[-1, 1]
     current_time_seconds = int(time.time())
     how_much_time_before_last_time_done_programming_seconds = (current_time_seconds-(int(
-        pd.read_csv("anylasis_of_time_consumed_in_programming.csv", usecols=["Unix Time"]).iloc[-1])))
+        pd.read_csv("analysis_of_time_consumed_in_programming.csv", usecols=["Unix Time"]).iloc[-1])))
     how_much_time_before_last_time_done_programming = str(
         timedelta(seconds=how_much_time_before_last_time_done_programming_seconds))
 
@@ -58,34 +57,34 @@ try:
         with open("info_regarding_previous_use.txt", 'w')as previous_use:
             previous_use.write('e')
 
-        with open("anylasis_of_time_consumed_in_programming.csv", 'a')as main_file:
+        with open("analysis_of_time_consumed_in_programming.csv", 'a')as main_file:
             data = f"{Year},{Month},{Day},{Date},{Proper_Date},{Time},{Unix_Time},{Epoch_time_tm_year},{Epoch_time_tm_mon},{Epoch_time_tm_mday},{Epoch_time_tm_hour},{Epoch_time_tm_min},{Epoch_time_tm_sec},{Epoch_time_tm_wday},{Epoch_time_tm_yday},{Epoch_time_tm_isdst},{Time_Zone}, {Time_Zone_Name}, {Type_Starting_or_Ending}\n"
 
             main_file.write(data)
 
-        main_csv = pd.read_csv("anylasis_of_time_consumed_in_programming.csv", usecols=[
+        main_csv = pd.read_csv("analysis_of_time_consumed_in_programming.csv", usecols=[
             "Proper Date", "Time"]).tail(2)
         programming_done_for_how_much_time = str(datetime.strptime(
             main_csv.iat[-1, 1], "%H:%M:%S") - datetime.strptime(main_csv.iat[-2, 1], "%H:%M:%S"))
         print(
-            f"You had started Programming at {programming_started}\nYou had done programming for {termcolor.colored(str(programming_done_for_how_much_time), 'blue')}\nI'm ending it\n")
+            f"You had started Programming at {programming_started}\nYou had done programming for {programming_done_for_how_much_time}\nI'm ending it\n")
 
     else:  # * Choice is s
 
         print(
-            f"I\'ll Start your Programming time\n\nLast time you had Ended doing programming on {Last_time_ended_programming_date} at {Last_time_ended_programming_time}", termcolor.colored(str(how_much_time_before_last_time_done_programming), 'blue'), termcolor.colored("time ago", 'blue'))
+            f"I\'ll Start your Programming time\n\nLast time you had Ended doing programming on {Last_time_ended_programming_date} at {Last_time_ended_programming_time}\n")
 
         Type_Starting_or_Ending = "Starting"
         with open("info_regarding_previous_use.txt", 'w')as previous_use:
             previous_use.write('s')
-        with open("anylasis_of_time_consumed_in_programming.csv", 'a')as main_file:
+        with open("analysis_of_time_consumed_in_programming.csv", 'a')as main_file:
             data = f"{Year},{Month},{Day},{Date},{Proper_Date},{Time},{Unix_Time},{Epoch_time_tm_year},{Epoch_time_tm_mon},{Epoch_time_tm_mday},{Epoch_time_tm_hour},{Epoch_time_tm_min},{Epoch_time_tm_sec},{Epoch_time_tm_wday},{Epoch_time_tm_yday},{Epoch_time_tm_isdst},{Time_Zone}, {Time_Zone_Name}, {Type_Starting_or_Ending}\n"
 
             main_file.write(data)
 
         if how_much_time_before_last_time_done_programming_seconds > 172800:
-            print(termcolor.colored(
-                f"\n\nYou are away from keys since {how_much_time_before_last_time_done_programming} and it\'s a long time so you need to state reason!", 'red'))
+            print(
+                f"\n\nYou are away from keys since {how_much_time_before_last_time_done_programming} and it\'s a long time so you need to state reason!")
             reason = input()
 
             if reason == ' ' or reason == '\n' or reason == '   ' or reason == '\t' or reason == '':
